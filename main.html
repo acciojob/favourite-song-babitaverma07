@@ -1,16 +1,50 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Song</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .song-info {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #333;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
-	<div>https://www.youtube.com/watch?v=VwCa5BLbyJ0</div>
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div class="song-info">
+        <h2>My current favourite song is "<span id="songName">[song_name]</span>"</h2>
+        <p>Listen to it on YouTube:</p>
+        <p><a id="songLink" href="[youtube_url]" target="_blank">Play on YouTube</a></p>
+    </div>
 
+    <script>
+        // Replace these values with your actual favorite song information
+        const songName = "Despacito";
+        const youtubeUrl = "https://www.youtube.com/watch?v=kJQP7kiw5Fk";
+
+        // Update the content with actual values
+        document.getElementById('songName').textContent = songName;
+        document.getElementById('songLink').href = youtubeUrl;
+    </script>
 </body>
-
 </html>
